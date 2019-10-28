@@ -101,33 +101,6 @@ header {
 	position: absolute;
 	left: 0px;
 }
-
-.slide_button {
-	display: block;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	border-radius: 100px;
-	border: 2px solid black;
-	background: #fff;
-	top: 80px;
-	left: 5px;
-	z-index: 500;
-}
-
-.slide_button_second {
-	display: block;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-    border-radius: 100px;
-    border: 2px solid black;
-	background: #fff;
-	top: 80px;
-	right: 5px;
-	z-index: 500;
-}
-
 .a {
 	width: 500px;
 	height: 200px;
