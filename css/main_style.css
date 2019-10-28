@@ -147,15 +147,6 @@ header {
 	display: none;
 }
 
-.decoration_line {
-	display: block;
-	height: 4px;
-	width: 4px;
-	border-radius: 50px 50px 50px 50px;
-    background: white;
-    transition: 0.2s linear;
-}
-
 /* Main block */
 
 .main_block {
@@ -276,10 +267,6 @@ header {
 @media (max-width: 1030px) {
 	.society {
 		display: none;
-	}
-
-	.decoration_line {
-		display: none
 	}
 
 	.sandwich {

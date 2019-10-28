@@ -15,65 +15,6 @@ setInterval(() => {
 }, 2000)
 
 
-
-
-let $vk = document.getElementById('iconVK');
-
-$vk.onmouseover = () => {
-	let line = document.getElementById('decVK');
-
-	line.style.width = "100%"
-}
-
-$vk.onmouseout = () => {
-	let line = document.getElementById('decVK');
-
-	line.style.width = "4px"
-}
-
-let $telegram = document.getElementById('iconTEL');
-
-$telegram.onmouseover = () => {
-	let line = document.getElementById('decTEL');
-
-	line.style.width = "100%"
-}
-
-$telegram.onmouseout = () => {
-	let line = document.getElementById('decTEL');
-
-	line.style.width = "4px"
-}
-
-let $twitter = document.getElementById('iconTWI');
-
-$twitter.onmouseover = () => {
-	let line = document.getElementById('decTWI');
-
-	line.style.width = "100%"
-}
-
-$twitter.onmouseout = () => {
-	let line = document.getElementById('decTWI');
-
-	line.style.width = "4px"
-}
-
-let $instagram = document.getElementById('iconINST');
-
-$instagram.onmouseover = () => {
-	let line = document.getElementById('decINST');
-
-	line.style.width = "100%"
-}
-
-$instagram.onmouseout = () => {
-	let line = document.getElementById('decINST');
-
-	line.style.width = "4px"
-}
-
-
 let $humanPhotoOne = document.getElementById('humanBlockOne');
 
 $humanPhotoOne.onmouseover = () => {
