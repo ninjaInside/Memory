@@ -14,7 +14,6 @@ setInterval(() => {
   img.style.left = x + 'px';
 }, 2000)
 
-
 let $humanPhotoOne = document.getElementById('humanBlockOne');
 
 $humanPhotoOne.onmouseover = () => {
@@ -261,5 +260,3 @@ function $hideSandwich() {
     sandwich.style.visibility = "visible";
     count = 1;
 } 
-
-
