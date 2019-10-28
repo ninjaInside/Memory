@@ -72,6 +72,8 @@ $instagram.onmouseout = () => {
 
 	line.style.width = "4px"
 }
+
+
 let $humanPhotoOne = document.getElementById('humanBlockOne');
 
 $humanPhotoOne.onmouseover = () => {
@@ -79,11 +81,6 @@ $humanPhotoOne.onmouseover = () => {
 
   $image.style.transform = "scale(1.2)";
   $image.style.filter = "blur(2px)";
-
-  $textOnPhoto.onmouseover = () => {
-    $image.style.transform = "scale(1.2)";
-    $image.style.filter = "blur(2px)";
-  }
 }
 
 $humanPhotoOne.onmouseout = () => {
@@ -91,11 +88,6 @@ $humanPhotoOne.onmouseout = () => {
 
   $image.style.transform = "scale(1)";
   $image.style.filter = "blur(0px)";
-  
-  $textOnPhoto.onmouseout = () => {
-    $image.style.transform = "scale(1)";
-    $image.style.filter = "blur(0px)";
-  }
 }
 
 let $humanPhotoTwo = document.getElementById('humanBlockTwo');
@@ -105,11 +97,6 @@ $humanPhotoTwo.onmouseover = () => {
 
   $image.style.transform = "scale(1.2)";
   $image.style.filter = "blur(2px)";
-
-  $textOnPhoto.onmouseover = () => {
-    $image.style.transform = "scale(1.2)";
-    $image.style.filter = "blur(2px)";
-  }
 }
 
 $humanPhotoTwo.onmouseout = () => {
@@ -117,11 +104,6 @@ $humanPhotoTwo.onmouseout = () => {
 
   $image.style.transform = "scale(1)";
   $image.style.filter = "blur(0px)";
-  
-  $textOnPhoto.onmouseout = () => {
-    $image.style.transform = "scale(1)";
-    $image.style.filter = "blur(0px)";
-  }
 }
 
 let $humanPhotoTh = document.getElementById('humanBlockTh');
@@ -131,11 +113,6 @@ $humanPhotoTh.onmouseover = () => {
 
   $image.style.transform = "scale(1.2)";
   $image.style.filter = "blur(2px)";
-
-  $textOnPhoto.onmouseover = () => {
-    $image.style.transform = "scale(1.2)";
-    $image.style.filter = "blur(2px)";
-  }
 }
 
 $humanPhotoTh.onmouseout = () => {
@@ -143,11 +120,6 @@ $humanPhotoTh.onmouseout = () => {
 
   $image.style.transform = "scale(1)";
   $image.style.filter = "blur(0px)";
-  
-  $textOnPhoto.onmouseout = () => {
-    $image.style.transform = "scale(1)";
-    $image.style.filter = "blur(0px)";
-  }
 }
 
 let $humanPhotoF = document.getElementById('humanBlockF');
@@ -157,11 +129,6 @@ $humanPhotoF.onmouseover = () => {
 
   $image.style.transform = "scale(1.2)";
   $image.style.filter = "blur(2px)";
-
-  $textOnPhoto.onmouseover = () => {
-    $image.style.transform = "scale(1.2)";
-    $image.style.filter = "blur(2px)";
-  }
 }
 
 $humanPhotoF.onmouseout = () => {
@@ -169,11 +136,6 @@ $humanPhotoF.onmouseout = () => {
 
   $image.style.transform = "scale(1)";
   $image.style.filter = "blur(0px)";
-  
-  $textOnPhoto.onmouseout = () => {
-    $image.style.transform = "scale(1)";
-    $image.style.filter = "blur(0px)";
-  }
 }
 
 let $humanPhotoFv = document.getElementById('humanBlockFv');
@@ -183,11 +145,6 @@ $humanPhotoFv.onmouseover = () => {
 
   $image.style.transform = "scale(1.2)";
   $image.style.filter = "blur(2px)";
-
-  $textOnPhoto.onmouseover = () => {
-    $image.style.transform = "scale(1.2)";
-    $image.style.filter = "blur(2px)";
-  }
 }
 
 $humanPhotoFv.onmouseout = () => {
@@ -195,11 +152,6 @@ $humanPhotoFv.onmouseout = () => {
 
   $image.style.transform = "scale(1)";
   $image.style.filter = "blur(0px)";
-  
-  $textOnPhoto.onmouseout = () => {
-    $image.style.transform = "scale(1)";
-    $image.style.filter = "blur(0px)";
-  }
 }
 
 let $humanPhotoSx = document.getElementById('humanBlockSx');
@@ -209,11 +161,6 @@ $humanPhotoSx.onmouseover = () => {
 
   $image.style.transform = "scale(1.2)";
   $image.style.filter = "blur(2px)";
-
-  $textOnPhoto.onmouseover = () => {
-    $image.style.transform = "scale(1.2)";
-    $image.style.filter = "blur(2px)";
-  }
 }
 
 $humanPhotoSx.onmouseout = () => {
@@ -221,11 +168,6 @@ $humanPhotoSx.onmouseout = () => {
 
   $image.style.transform = "scale(1)";
   $image.style.filter = "blur(0px)";
-  
-  $textOnPhoto.onmouseout = () => {
-    $image.style.transform = "scale(1)";
-    $image.style.filter = "blur(0px)";
-  }
 }
 
 let $humanPhotoS = document.getElementById('humanBlockS');
@@ -235,11 +177,6 @@ $humanPhotoS.onmouseover = () => {
 
   $image.style.transform = "scale(1.2)";
   $image.style.filter = "blur(2px)";
-
-  $textOnPhoto.onmouseover = () => {
-    $image.style.transform = "scale(1.2)";
-    $image.style.filter = "blur(2px)";
-  }
 }
 
 $humanPhotoS.onmouseout = () => {
@@ -247,11 +184,6 @@ $humanPhotoS.onmouseout = () => {
 
   $image.style.transform = "scale(1)";
   $image.style.filter = "blur(0px)";
-  
-  $textOnPhoto.onmouseout = () => {
-    $image.style.transform = "scale(1)";
-    $image.style.filter = "blur(0px)";
-  }
 }
 
 let $humanPhotoE = document.getElementById('humanBlockE');
@@ -261,11 +193,6 @@ $humanPhotoE.onmouseover = () => {
 
   $image.style.transform = "scale(1.2)";
   $image.style.filter = "blur(2px)";
-
-  $textOnPhoto.onmouseover = () => {
-    $image.style.transform = "scale(1.2)";
-    $image.style.filter = "blur(2px)";
-  }
 }
 
 $humanPhotoE.onmouseout = () => {
@@ -273,11 +200,6 @@ $humanPhotoE.onmouseout = () => {
 
   $image.style.transform = "scale(1)";
   $image.style.filter = "blur(0px)";
-  
-  $textOnPhoto.onmouseout = () => {
-    $image.style.transform = "scale(1)";
-    $image.style.filter = "blur(0px)";
-  }
 }
 
 $(document).ready(function(){
@@ -382,6 +304,21 @@ function PopUpHideE() {
   $('#popUpE').hide();
 }
 
+// script sandwich
 
+let hideSandwich = document.getElementById('button-on-sandwich');
+let sandwich = document.getElementById('icon__icon_sand');
+let count = 0;
+
+hideSandwich.addEventListener("click", $hideSandwich);
+
+function $hideSandwich() {
+  if (count == 1) {
+    sandwich.style.visibility = "hidden";
+    return count = 0;
+  }
+    sandwich.style.visibility = "visible";
+    count = 1;
+} 
 
 

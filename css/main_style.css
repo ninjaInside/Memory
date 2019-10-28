@@ -143,6 +143,10 @@ header {
 	width: 35px;
 }
 
+.sandwich {
+	display: none;
+}
+
 .decoration_line {
 	display: block;
 	height: 4px;
@@ -270,6 +274,53 @@ header {
 }
 
 @media (max-width: 1030px) {
+	.society {
+		display: none;
+	}
+
+	.decoration_line {
+		display: none
+	}
+
+	.sandwich {
+		position: absolute;
+		right: 20px;
+		top: 40px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.icon__icon_sand {
+		visibility: hidden;
+	} 
+
+	.veteran {
+		pointer-events: none;
+	}
+
+	.info {
+		pointer-events: auto;
+	}
+
+	.icons {
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+
+	.icons.sand {
+		margin-bottom: 20px;
+		margin-top: 0px;
+	}
+
+	.icon {
+		width: 50px;
+	}
+	
+	.wrapper_head {
+		justify-content: space-around;
+		position: relative;
+	}
+
 	.R {
 		font-size: 100px;
 		font-weight: bold;
@@ -278,10 +329,6 @@ header {
     .slide_and_text {
         flex-direction: column;
         margin-top: 100px;
-    }
-
-    .icon {
-    	width: 50px;
     }
     
     .outher_text.LO {
@@ -308,6 +355,9 @@ header {
 
 	.row {
 		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
     .text {
