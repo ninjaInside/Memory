@@ -121,19 +121,3 @@ function PopUpShowE() {
 function PopUpHideE() {
   $('#popUpE').hide();
 }
-
-// script social icon
-
-let mywindow = $(window);
-let mypos = mywindow.scrollTop();
-
-mywindow.scroll(function() {
-
-  if (mywindow.scrollTop() > mypos) {
-    $('.social-icon').fadeIn();
-  } else {
-    $('.social-icon').fadeOut();
-  }
-
-  mypos = mywindow.scrollTop();
-})
