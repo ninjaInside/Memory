@@ -285,6 +285,13 @@ header {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		-moz-width: 100%;
+		-moz-padding: 10px;
+		-moz-background: #000;
+		-moz-display: flex;
+		-moz-flex-direction: row;
+		-moz-justify-content: center;
+		-moz-align-items: center;
 	}
 
 	.icon-on-smart {
@@ -292,6 +299,10 @@ header {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		-moz-display: flex;
+		-moz-flex-direction: row;
+		-moz-justify-content: center;
+		-moz-align-items: center;
 	}
 	.popUp_container {
 		max-width: 80%;
