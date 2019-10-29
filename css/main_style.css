@@ -4,9 +4,10 @@ body {
 	box-sizing: content-box;
 }
 
-*, *::after, *::before {
+*, *::after, *::before, *:focus {
     box-sizing: border-box;
     user-select: none;
+    outline: none;
 }
 
 .wrapper {

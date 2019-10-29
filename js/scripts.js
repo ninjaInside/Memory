@@ -138,3 +138,11 @@ function $hideSandwich() {
     sandwich.style.visibility = "visible";
     count = 1;
 } 
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 250) {
+    $('.icon__icon_sand').fadeOut();
+  } else {
+    $('.icon__icon_sand').fadeIn();
+  }
+});
