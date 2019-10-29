@@ -270,10 +270,6 @@ header {
 }
 
 @media (max-width: 1030px) {
-	.popUp_container {
-		max-width: 80%;
-		font-size: 40px;
-	}
 	.society {
 		display: none;
 	}
