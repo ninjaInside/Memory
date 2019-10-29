@@ -4,8 +4,10 @@ body {
 	box-sizing: content-box;
 }
 
-*, *::after, *::before {
+*, *::after, *::before, *:focus {
     box-sizing: border-box;
+    user-select: none;
+    outline: none;
 }
 
 .wrapper {
@@ -147,15 +149,6 @@ header {
 	display: none;
 }
 
-.decoration_line {
-	display: block;
-	height: 4px;
-	width: 4px;
-	border-radius: 50px 50px 50px 50px;
-    background: white;
-    transition: 0.2s linear;
-}
-
 /* Main block */
 
 .main_block {
@@ -177,6 +170,9 @@ header {
 	overflow: hidden;
 }
 
+.veteran:hover .image {
+	filter: blur(2px);
+}
 
 .image {
 	width: 100%;
@@ -282,10 +278,6 @@ header {
 		display: none;
 	}
 
-	.decoration_line {
-		display: none
-	}
-
 	.sandwich {
 		position: absolute;
 		right: 20px;
@@ -297,7 +289,7 @@ header {
 	.icon__icon_sand {
 		visibility: hidden;
 	} 
-
+	
 	.veteran {
 		pointer-events: none;
 	}
