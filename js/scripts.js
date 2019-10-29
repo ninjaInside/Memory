@@ -122,27 +122,18 @@ function PopUpHideE() {
   $('#popUpE').hide();
 }
 
-// script sandwich
+// script social icon
 
-let hideSandwich = document.getElementById('button-on-sandwich');
-let sandwich = document.getElementById('icon__icon_sand');
-let count = 0;
+let mywindow = $(window);
+let mypos = mywindow.scrollTop();
 
-hideSandwich.addEventListener("click", $hideSandwich);
+mywindow.scroll(function() {
 
-function $hideSandwich() {
-  if (count == 1) {
-    sandwich.style.visibility = "hidden";
-    return count = 0;
-  }
-    sandwich.style.visibility = "visible";
-    count = 1;
-} 
-
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 250) {
-    $('.icon__icon_sand').fadeOut();
+  if (mywindow.scrollTop() > mypos) {
+    $('.social-icon').fadeIn();
   } else {
-    $('.icon__icon_sand').fadeIn();
+    $('.social-icon').fadeOut();
   }
-});
+
+  mypos = mywindow.scrollTop();
+})

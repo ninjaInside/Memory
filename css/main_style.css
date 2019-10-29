@@ -145,10 +145,6 @@ header {
 	width: 35px;
 }
 
-.sandwich {
-	display: none;
-}
-
 /* Main block */
 
 .main_block {
@@ -263,6 +259,17 @@ header {
 	color: #fff;	
 }
 
+
+/* Social */
+
+.social-icon {
+	display: none;
+}
+
+.icon-on-smart {
+	display: none
+}
+
 @media (max-width: 1100px) {
 	.row {
 		width: 300px;
@@ -270,21 +277,29 @@ header {
 }
 
 @media (max-width: 1030px) {
+	.social-icon {
+		width: 100%;
+		padding: 10px;
+		background: #000;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.icon-on-smart {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
 	.popUp_container {
 		max-width: 80%;
 		font-size: 40px;
 	}
-	
+
 	.society {
 		display: none;
-	}
-
-	.sandwich {
-		position: absolute;
-		right: 20px;
-		top: 40px;
-		display: flex;
-		flex-direction: column;
 	}
 
 	.icon__icon_sand {
@@ -302,15 +317,12 @@ header {
 	.icons {
 		margin-bottom: 10px;
 		margin-top: 10px;
-	}
-
-	.icons.sand {
-		margin-bottom: 20px;
-		margin-top: 0px;
+		margin-left: 40px;
+		margin-right: 40px;
 	}
 
 	.icon {
-		width: 50px;
+		width: 80px;
 	}
 	
 	.wrapper_head {
