@@ -1,18 +1,24 @@
+// slider
+
 let next = document.getElementById('_next');
 let prev = document.getElementById('_prev');
 let img = document.getElementById('pic');
 let x = 0;
 
-setInterval(() => {
+let slider = setTimeout(function slide() {
   if (x === -1500) {
-    x = 0
+    x = 500;
     img.style.left = x + 'px';
   }
 
   x += -500;
 
   img.style.left = x + 'px';
+
+  slider = setTimeout(slide, 2000)
 }, 2000)
+
+// PopUp Window scripts
 
 $(document).ready(function(){
   PopUpHideO();

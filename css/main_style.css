@@ -169,6 +169,9 @@ header {
 	overflow: hidden;
 }
 
+.veteran:hover .image {
+	filter: blur(2px);
+}
 
 .image {
 	width: 100%;
