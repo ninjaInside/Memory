@@ -1,21 +1,38 @@
 // slider
 
-let next = document.getElementById('_next');
-let prev = document.getElementById('_prev');
-let img = document.getElementById('pic');
+function cache(key, value) {
+
+	if (typeof(value) == 'undefined') {
+		return cache[key];
+	}
+
+	cache[key] = value;
+
+}
+
+function _id_(currentId) {
+
+	cache(currentId, document.getElementById(currentId));
+
+	return cache(currentId);
+
+}
+
 let x = 0;
 
 let slider = setTimeout(function slide() {
+
   if (x === -1500) {
     x = 500;
-    img.style.left = x + 'px';
+    _id_('pic').style.left = x + 'px';
   }
 
   x += -500;
 
-  img.style.left = x + 'px';
+   _id_('pic').style.left = x + 'px';
 
   slider = setTimeout(slide, 2000)
+
 }, 2000)
 
 // PopUp Window scripts
@@ -25,11 +42,11 @@ $(document).ready(function(){
 }) 
 
 function PopUpShowO() {
-  $('#popUpO').show();
+  $(_id_('popUpO')).show();
 }
 
 function PopUpHideO() {
-  $('#popUpO').hide();
+  $(_id_('popUpO')).hide();
 }
 
 $(document).ready(function(){
@@ -37,11 +54,11 @@ $(document).ready(function(){
 }) 
 
 function PopUpShowT() {
-  $('#popUpT').show();
+  $(_id_('popUpT')).show();
 }
 
 function PopUpHideT() {
-  $('#popUpT').hide();
+  $(_id_('popUpT')).hide();
 }
 
 
@@ -50,11 +67,11 @@ $(document).ready(function(){
 }) 
 
 function PopUpShowTh() {
-  $('#popUpTh').show();
+  $(_id_('popUpTh')).show();
 }
 
 function PopUpHideTh() {
-  $('#popUpTh').hide();
+  $(_id_('popUpTh')).hide();
 }
 
 
@@ -63,11 +80,11 @@ $(document).ready(function(){
 }) 
 
 function PopUpShowF() {
-  $('#popUpF').show();
+  $(_id_('popUpF')).show();
 }
 
 function PopUpHideF() {
-  $('#popUpF').hide();
+  $(_id_('popUpF')).hide();
 }
 
 
@@ -76,11 +93,11 @@ $(document).ready(function(){
 }) 
 
 function PopUpShowFv() {
-  $('#popUpFv').show();
+  $(_id_('popUpFv')).show();
 }
 
 function PopUpHideFv() {
-  $('#popUpFv').hide();
+  $(_id_('popUpFv')).hide();
 }
 
 
@@ -89,11 +106,11 @@ $(document).ready(function(){
 }) 
 
 function PopUpShowSx() {
-  $('#popUpSx').show();
+  $(_id_('popUpSx')).show();
 }
 
 function PopUpHideSx() {
-  $('#popUpSx').hide();
+  $(_id_('popUpSx')).hide();
 }
 
 
@@ -102,11 +119,11 @@ $(document).ready(function(){
 }) 
 
 function PopUpShowS() {
-  $('#popUpS').show();
+  $(_id_('popUpS')).show();
 }
 
 function PopUpHideS() {
-  $('#popUpS').hide();
+  $(_id_('popUpS')).hide();
 }
 
 
@@ -115,9 +132,9 @@ $(document).ready(function(){
 }) 
 
 function PopUpShowE() {
-  $('#popUpE').show();
+  $(_id_('popUpE')).show();
 }
 
 function PopUpHideE() {
-  $('#popUpE').hide();
+  $(_id_('popUpE')).hide();
 }
