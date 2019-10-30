@@ -31,15 +31,15 @@ let slider = setTimeout(function slide() {
 
    _id_('pic').style.left = x + 'px';
 
-  slider = setTimeout(slide, 2000)
+  slider = setTimeout(slide, 2000);
 
-}, 2000)
+}, 2000);
 
 // PopUp Window scripts
 
 $(document).ready(function(){
   PopUpHideO();
-}) 
+}); 
 
 function PopUpShowO() {
   $(_id_('popUpO')).show();
@@ -51,7 +51,7 @@ function PopUpHideO() {
 
 $(document).ready(function(){
   PopUpHideT();
-}) 
+});
 
 function PopUpShowT() {
   $(_id_('popUpT')).show();
@@ -64,7 +64,7 @@ function PopUpHideT() {
 
 $(document).ready(function(){
   PopUpHideTh();
-}) 
+});
 
 function PopUpShowTh() {
   $(_id_('popUpTh')).show();
@@ -77,7 +77,7 @@ function PopUpHideTh() {
 
 $(document).ready(function(){
   PopUpHideF();
-}) 
+}); 
 
 function PopUpShowF() {
   $(_id_('popUpF')).show();
@@ -90,7 +90,7 @@ function PopUpHideF() {
 
 $(document).ready(function(){
   PopUpHideFv();
-}) 
+}); 
 
 function PopUpShowFv() {
   $(_id_('popUpFv')).show();
@@ -103,7 +103,7 @@ function PopUpHideFv() {
 
 $(document).ready(function(){
   PopUpHideSx();
-}) 
+}); 
 
 function PopUpShowSx() {
   $(_id_('popUpSx')).show();
@@ -116,7 +116,7 @@ function PopUpHideSx() {
 
 $(document).ready(function(){
   PopUpHideS();
-}) 
+}); 
 
 function PopUpShowS() {
   $(_id_('popUpS')).show();
@@ -128,8 +128,8 @@ function PopUpHideS() {
 
 
 $(document).ready(function(){
-  PopUpHideE()
-}) 
+  PopUpHideE();
+}); 
 
 function PopUpShowE() {
   $(_id_('popUpE')).show();
