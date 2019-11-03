@@ -13,7 +13,6 @@ body {
 .wrapper {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -161,19 +160,26 @@ header {
 
 .veteran {
 	position: relative;
-	width: inherit;
+	width: 100%;
+	height: 100%;
 	margin: 25px 0;
 	overflow: hidden;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .veteran:hover .image {
 	filter: blur(2px);
+	transform: scale(1.1);
 }
 
 .image {
-	width: 100%;
-	height: 100%;
-	transition: .5s
+	width: 99%;
+	height: 99%;
+	transition: .5s;
+	overflow: hidden;
 }
 
 
