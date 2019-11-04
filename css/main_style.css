@@ -31,7 +31,7 @@ header {
 
 .wrapper_head {
 	justify-content: space-between;
-	padding: 5px 0;
+	padding: 5px 15px;
 	width: 100%;
     max-width: 1200px;
     margin: 0 auto;
