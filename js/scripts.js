@@ -246,7 +246,7 @@ function PopUpShowE() {
 function PopUpHideE() {
   $(_id_('popUpE')).hide();
   document.body.style.overflow = "";
-  _select_(".nav_and_logo").navAndLogo.style.paddingRight = "";
+  _select_(".nav_and_logo").style.paddingRight = "";
   _select_(".header").style.paddingRight = "";
   _select_(".main_block").style.paddingRight = "";
   document.body.paddingRight = ""
