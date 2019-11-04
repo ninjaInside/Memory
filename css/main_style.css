@@ -24,6 +24,9 @@ header {
 	width: 100%;
 	background: black;
 	padding: 30px 0;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper_head {
@@ -41,7 +44,6 @@ header {
 	width: 100%;
 	height: inherit;
 	max-width: 1100px;
-	margin: 0 auto;
 }
 
 .nav_and_logo {
