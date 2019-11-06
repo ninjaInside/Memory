@@ -234,3 +234,27 @@ function PopUpHideE() {
   _select_(".main_block").style.paddingRight = "";
   document.body.paddingRight = ""
 }
+
+$(document).ready(function(){
+  PopUpHideG();
+});
+
+function PopUpShowG() {
+  $(_id_('popUpG')).show();
+  document.body.style.overflow = "hidden";
+  let clientWidthNow = document.body.clientWidth;
+  let paddingFlame = clientWidthNow - defoltClientWidth;
+  _select_(".nav_and_logo").style.paddingRight = `${paddingFlame}px`;
+  _select_(".header").style.paddingRight = `${paddingFlame}px`;
+  _select_(".main_block").style.paddingRight = `${paddingFlame}px`;
+  document.body.paddingRight = `${paddingFlame}px`;
+}
+
+function PopUpHideG() {
+  $(_id_('popUpG')).hide();
+  document.body.style.overflow = "";
+  _select_(".nav_and_logo").style.paddingRight = "";
+  _select_(".header").style.paddingRight = "";
+  _select_(".main_block").style.paddingRight = "";
+  document.body.paddingRight = ""
+}
