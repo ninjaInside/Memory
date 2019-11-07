@@ -7,6 +7,7 @@ body {
 *, *::after, *::before, *:focus {
     box-sizing: border-box;
     outline: none;
+    text-decoration: none;
 }
 
 .wrapper {
@@ -124,11 +125,6 @@ header {
     background-size: cover;
 }
 
-.society {
-    display: flex;
-    flex-direction: row;
-}
-
 .icons {
     margin-left: 10px;
     margin-right: 10px;
@@ -142,6 +138,80 @@ header {
 
 .icon {
     width: 35px;
+}
+
+.oop {
+    display: flex;
+}
+
+.pay-to-resp {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Monserrat", sans-serif;
+    padding: 8px;
+    transition: .35s ease;
+}
+
+.anim_block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.but__pay-to-resp {
+    position: relative;
+}
+
+.anim_elem__anim_block {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    transition: .35s ease;
+    color: #000;
+    font-size: 18px;
+    font-family: "Monserrat", sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.but__pay-to-resp:hover .anim_elem__anim_block {
+    width: 100%;
+}
+
+.form-is-email {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.text-in-form {
+    margin-bottom: 15px
+}
+
+input {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 100%;
+    border-radius: 0px;
+    background: #fff;
+    border: 2px solid black;
+    padding: 8px;
+}
+
+button {
+    width: 100%;
+    background: #fff;
+    border: 2px solid black;
+    padding: 8px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 /* Main block */
@@ -176,6 +246,10 @@ header {
     transform: scale(1.1);
 }
 
+.veteran:hover .text_block {
+    opacity: 1;
+}
+
 .image {
     width: 100%;
     height: 100%;
@@ -195,12 +269,6 @@ header {
     opacity: 0;
     transition: .5s;
 }
-
-
-.text_block:hover {
-    opacity: 1;
-}
-
 
 .text {
     font-family: sans-serif;
@@ -226,7 +294,6 @@ header {
 .info:hover {
     background-color: #ededed;
 }
-
 
 /* PopOp */
 
@@ -265,8 +332,6 @@ header {
     text-decoration: none;
     color: #fff;	
 }
-
-
 /* Social */
 
 .social-icon {

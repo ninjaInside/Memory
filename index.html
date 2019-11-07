@@ -14,6 +14,26 @@
 	<title>MEMORY</title>
 </head>
 <body>
+    <div class="popUp_window oop">
+        <div class="popUp_container">
+            <div class="text-in-form">
+                Если вы желаете поблагодарить людей, которые работали
+                над данным сайтом, то заполните форму.
+            </div>
+
+            <div class="form-is-email">
+                <form action="mail.php" method="POST">
+                    <input type="text" form="mail" name="user_name" placeholder="Имя">
+
+                    <input type="text" form="mail" user="user_message" placeholder="Сообщение">
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+
+            <a href="" class="popUp_hide">Назад</a>
+        </div>
+    </div>
 	<div class="popUp_window" id="popUpO">
 		<div class="popUp_container">
     			Тихонов Николай Федорович родился в 1921 году в Курянске
@@ -50,7 +70,7 @@
 	 		<a href="javascript:PopUpHideTh()" class="popUp_hide">закрыть</a>
 	 	</div>
 	</div> 
-	<div class="popUp_window" id="popUpF">
+	<div class="popUp_window PopUpHideF" id="popUpF">
 	 	<div class="popUp_container">
     	 		Шаманов Иван Гавриилович родился в 1908 году в деревне Новосельцы. Член КПСС. До войны работал в Якутии летчиком-аэрофотосъемщиком. Майор, командир минно-торпедной бомбардировочной авиации дальнего действия Краснознаменного Балтийского флота. Защищал подступы к Ленинграду, участвовал  в прорыве блокады города, освобождал Прибалтику, потопил 8 военно-транспортных кораблей врага, бомбовыми ударами разрушал немецкие минные поля и противолодочные заграждения, в глубоком тылу врага бомбил аэродромы, железнодорожные узлы и другие военные объекты. Всего совершил 240 боевых вылетов
                 Звание Героя Советского Союза И.Г. Шаманов удостоен в 1944 г. После войны работал летчиком-испытателем.
@@ -104,21 +124,16 @@
     <div class="nav_and_logo">
         <div class="wrapper_head">
             <span class="R">memory</span>
-            
-            <nav class="society">
-                <a href="#" class="icons">
-                    <img src="css/img/icon/vk.png" class="icon" id="iconVK">
-                </a>
-                <a href="#" class="icons">
-                    <img src="css/img/icon/telegram.png" class="icon" id="iconTEL">
-                </a>
-                <a href="#" class="icons">
-                    <img src="css/img/icon/twitter.png" class="icon" id="iconTWI">
-                </a>
-                <a href="#" class="icons">
-                    <img src="css/img/icon/instagram.png" class="icon" id="iconINST">
-                </a>
-            </nav>
+            <a href="#" class="but__pay-to-resp">
+                <div class="anim_block">
+                    <div class="anim_elem__anim_block">
+                        Поддержать
+                    </div>
+                </div>
+                <div class="pay-to-resp">
+                    <span class="text__pay-to-resp">Поддержать</span>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -222,7 +237,6 @@
             </div>
         </div>
 	</div>
-
     <div class="social-icon">
         <div class="icon-on-smart">
             <a href="#" class="icons">
