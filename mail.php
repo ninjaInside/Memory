@@ -9,23 +9,24 @@ $message = $_POST['user_message'];
 
 $mail->isSMTP();
 $mail->Host = 'smtp.mail.ru';
-$mail->SMPTAuth = true;
+$mail->SMTPAuth = true;
 $mail->Username = 'magomed.botov@mail.ru';
 $mail->Password = 'kirill666A';
-$mail->SMPTSecure = 'ssl';
+$mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 $mail->setFrom('magomed.botov@mail.ru');
 $mail->addAddress('mr.glazki@mail.ru');
 
-$mail->IsHTML(true);
+$mail->isHTML(true);
 
 $mail->Subject = 'Вас поблагодарили';
-$mail->Body    = '' .$name . 'Написал(а)' .$message;
+$mail->Body    = '' .$name .  '  Написал(а)  '  .$message;
 $mail->AltBody = '';
 
-if(!mail->send()) {
-	echo "При отправке письма возникла ошибка";
+if(!$mail->send()) {
+	echo "<script src='js/windowPHPErr.js'></script>";
 } else {
-	echo "Письмо успешно отправлено";
+	echo "<script src='js/windowPHPSucs.js'></script>";
 }
+?>

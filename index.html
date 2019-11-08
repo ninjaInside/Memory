@@ -14,7 +14,7 @@
 	<title>MEMORY</title>
 </head>
 <body>
-    <div class="popUp_window oop">
+    <div class="popUp_window" id="popUpForm">
         <div class="popUp_container">
             <div class="text-in-form">
                 Если вы желаете поблагодарить людей, которые работали
@@ -23,15 +23,15 @@
 
             <div class="form-is-email">
                 <form action="mail.php" method="POST">
-                    <input type="text" form="mail" name="user_name" placeholder="Имя">
+                    <input type="text" id="" name="user_name" placeholder="Имя">
 
-                    <input type="text" form="mail" user="user_message" placeholder="Сообщение">
+                    <input type="text" id="" name="user_message" placeholder="Сообщение">
 
                     <button type="submit">Отправить</button>
                 </form>
             </div>
 
-            <a href="" class="popUp_hide">Назад</a>
+            <a href="javascript:PopUpHideForm()" class="popUp_hide">Назад</a>
         </div>
     </div>
 	<div class="popUp_window" id="popUpO">
@@ -124,7 +124,7 @@
     <div class="nav_and_logo">
         <div class="wrapper_head">
             <span class="R">memory</span>
-            <a href="#" class="but__pay-to-resp">
+            <a href="javascript:PopUpShowForm()" class="but__pay-to-resp">
                 <div class="anim_block">
                     <div class="anim_elem__anim_block">
                         Поддержать
