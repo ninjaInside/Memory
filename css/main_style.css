@@ -345,6 +345,9 @@ button {
 }
 
 @media (max-width: 1030px) {
+    .navigation {
+        display: none;
+    }
     
     .but__pay-to-resp {
         display: none;
