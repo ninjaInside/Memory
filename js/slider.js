@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('.slider').cycle({
     fx: 'fade',
-    speed: 900, 
+    speed: 850, 
     timeout: 1000,
     random: 1,
     pause: 1,
