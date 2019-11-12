@@ -1,17 +1,19 @@
 # Memory
 
-Site about veterans of the Great Patriotic War
+Сайт о ветеранах ВОВ
 
---
+**Небольшое описание сайта:**
 
-Libraries and plugins used during development:
+Сайт располагается на бесплатном хостинге без доступа к ssh, поэтому на данный момент весь сайт - статическая страница. В дальнейшем есть возможность перенести сайт на хостинг с ssh, после чего написать backend на фреймворке Python - Django. На данный же момент сайт написан просто на HTML5 + CSS3 + JS
 
-[jQuery](https://jquery.com)
+**Библиотеки и плагины, которые мы использовали для создания сайта:**
 
-[JQuery Cycle Plugin](jquery.malsup.com›cycle)
+> [jQuery](https://jquery.com)
 
-[PHPMailer](https://github.com›PHPMailer›PHPMailer)
+> [JQuery Cycle Plugin](jquery.malsup.com›cycle)
 
---
+> [PHPMailer](https://github.com›PHPMailer›PHPMailer)
+
+**Ссылка на сайт**
 
 [our site](http://f0348620.xsph.ru/)
