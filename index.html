@@ -21,7 +21,7 @@
         <div class="popUp_container">
             <div class="text-in-form">
                 Если вы желаете поблагодарить людей, которые работали
-                над данным сайтом, то заполните форму.
+                над данным сайтом, то заполните форму и нажмие кнопку отправить.
             </div>
 
             <div class="form-is-email">
@@ -34,7 +34,7 @@
                 </form>
             </div>
 
-            <a href="javascript:PopUpHideForm()" class="popUp_hide">Назад</a>
+            <a href="javascript:close()" class="popUp_hide" data-elem="#popUpForm">Закрыть</a>
         </div>
     </div>
 	<div class="popUp_window" id="popUpO">
@@ -128,7 +128,7 @@
     <div class="nav_and_logo">
         <div class="wrapper_head">
             <span class="R">memory</span>
-            <a href="javascript:PopUpShowForm()" class="but__pay-to-resp">
+            <a href="javascript:open()" class="but__pay-to-resp" data-elem="#popUpForm">
                 <div class="anim_block">
                     <div class="anim_elem__anim_block">
                         Поддержать
