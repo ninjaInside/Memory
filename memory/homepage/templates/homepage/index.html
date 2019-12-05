@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="{% static 'homepage/css/style.css' %}">
+	<meta charset="UTF-8">
+	<title>MEMORY</title>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="main">
+		<div class="main_text">memory</div>
+		<div class="second_text">Этот сайт посвящен нашим родственникам, сражавшимся в Великой Отечественной Войне. Пока что мы собираем информацию о ветеранах Нерюнгринского района, но в будущем можно будет расширить количество городов, в которых живут наши герои</div>
+		<a href="{% url 'posts:index' %}" class="link">перейти на сайт</a>
+	</div>
+</body>
+</html>

@@ -1,9 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
-from .models import *
+from .models import Veteran
 
 
-def posts_list(request):
-	veterans = Veteran.objects.all()
-	return render(request, 'posts/index.html', context={'veterans': veterans})
+def posts(request):
+    veterans = Veteran.objects.all()
+    return render(request, 'posts/posts.html', {'veterans': veterans})
