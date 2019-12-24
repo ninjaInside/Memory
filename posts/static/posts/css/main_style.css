@@ -11,6 +11,7 @@ body {
 }
 
 .wrapper {
+    -js-display: flex;
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -22,6 +23,7 @@ body {
 /* Header */
 
 header {
+    -js-display: flex;
     width: 100%;
     background: black;
     padding: 30px 0;
@@ -67,6 +69,7 @@ header {
 }
 
 .wrapper_head {
+    -js-display: flex;
     justify-content: space-between;
     padding: 5px 15px;
     width: 100%;
@@ -84,6 +87,7 @@ header {
 }
 
 .nav_and_logo {
+    -js-display: flex;
     position: fixed;
     z-index: 1000;
     background: black;
@@ -96,6 +100,7 @@ header {
 }
 
 .navigation {
+    -js-display: flex;
     display: flex;
     flex-direction: row;
     margin-top: 10px;
@@ -109,6 +114,7 @@ header {
 }
 
 .slide_and_text {
+    -js-display: flex;
     width: 100%;
     padding: 15px;
     margin-top: 50px;
@@ -132,6 +138,7 @@ header {
 }
 
 .slider {
+    -js-display: flex;
     width: 500px;
     height: 200px;
     position: relative;
@@ -141,6 +148,7 @@ header {
 }
 
 .picture {
+    -js-display: flex;
     width: 2000px;
     display: flex;
     flex-direction: row;
@@ -152,6 +160,7 @@ header {
     width: 100%;
 }
 .icons {
+    -js-display: flex;
     margin-left: 10px;
     margin-right: 10px;
     text-decoration: none;
@@ -171,6 +180,7 @@ header {
 }
 
 .oop {
+    -js-display: flex;
     display: flex;
 }
 
@@ -184,6 +194,7 @@ header {
 }
 
 .anim_block {
+    -js-display: flex;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -197,6 +208,7 @@ header {
 }
 
 .anim_elem__anim_block {
+    -js-display: flex;
     width: 5%;
     height: 100%;
     background: #fff;
@@ -212,6 +224,7 @@ header {
 }
 
 .form-is-email {
+    -js-display: flex;
     display: flex;
     justify-content: center;
     position: relative;
@@ -250,6 +263,7 @@ button {
 /* Main block */
 
 .main_block {
+    -js-display: flex;
     margin-top: 100px;
     width: 100%;
     padding: 15px 0;
@@ -264,6 +278,7 @@ button {
 }
 
 .veteran {
+    -js-display: flex;
     position: relative;
     margin: 25px 10px;
     overflow: hidden;
@@ -329,6 +344,7 @@ button {
 /* PopOp */
 
 .popUp_window {
+    -js-display: flex;
     font-family: "Monserrat", sans-serif;
     position: fixed;
     top: 0;
@@ -391,6 +407,7 @@ button {
     }
 
     .social-icon {
+        -js-display: flex;
         width: 100%;
         padding: 10px;
         background: #000;
@@ -413,6 +430,7 @@ button {
     }
 
     .icon-on-smart {
+        -js-display: flex;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -492,6 +510,7 @@ button {
     }
 
     .row {
+        -js-display: flex;
         width: 90%;
         display: flex;
         flex-direction: column;
