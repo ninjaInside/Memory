@@ -1,32 +1,29 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{% static 'posts/css/main_style.css' %}">
-	<script src="{% static 'posts/js/jquery.min.js' %}"></script>
-    <script src="{% static 'posts/js/flexbility.js' %}"></script>
-    <script src="{% static 'posts/js/flexBoxPoll.js' %}" defer></script>
-    <script src="{% static 'posts/js/popup.js' %}" defer></script>
+	<link rel="stylesheet" href="css/main_style.css">
+	<script src="js/jquery.min.js"></script>
+    <script src="js/flexbility.js"></script>
+    <script src="js/flexBoxPoll.js" defer></script>
+    <script src="js/popup.js" defer></script>
 	<title>MEMORY</title>
 </head>
 <body>
     <div id="popUps">
-        {% for veteran in veterans %}
-    	<div class="popUp_window" id="popUp{{ veteran.id }}">
+    	<div class="popUp_window" id="popUp1">
     		<div class="popUp_container" id="popUp_container">
-                {{ veteran.info }}
-    			<a href="javascript:close()" class="popUp_hide" data-elem="#popUp{{ veteran.id }}">закрыть</a>
+                lorem ipsum tosyo tosyo
+    			<a href="javascript:close()" class="popUp_hide" data-elem="#popUp1">закрыть</a>
     		</div>
     	</div>
-        {% endfor %}
     </div>
 
 
     <div class="nav_and_logo">
         <div class="wrapper_head">
-            <a href="{% url 'homepage:index' %}" class="R">memory</a>
+            <a href="#" class="R">memory</a>
             <a href="javascript:open()" class="but__pay-to-resp" data-elem="#popUpForm">
                 <div class="anim_block">
                     <div class="anim_elem__anim_block">
@@ -40,25 +37,21 @@
         </div>
     </div>
 
-    {% if request.user.is_authenticated %}
     <div class="main_admin">
-        <a href="/admin/posts/veteran/add/" class="admin_add">добавить</a>
-        <a href="/admin/posts/veteran/" class="admin_edit">редактировать</a>
+        <a href="#" class="admin_add">добавить</a>
+        <a href="#" class="admin_edit">редактировать</a>
     </div>
-    {% endif %}
 
 
 	<div class="main_block">  
         <div class="wrapper">
-            {% for veteran in veterans %}
             <div class="veteran">
-                <img src="{{ veteran.image.url }}" class="image">
+                <img src="css/img/veteran1.png" class="image">
                 <div class="text_block">
-                    <span class="text">{{ veteran.date }}</span>
+                    <span class="text">1912-2001</span>
                 </div>
-                <a href="javascript:open()" class="info" data-elem="#popUp{{ veteran.id }}"></a>
+                <a href="javascript:open()" class="info" data-elem="#popUp1"></a>
             </div>
-            {% endfor %}
         </div>
 	</div>
 
