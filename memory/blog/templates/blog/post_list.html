@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <script src="{% static 'blog/js/modernizr-custom.js' %}"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'blog/css/main_style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+    <script src="{% static 'blog/js/flexbility.js' %}" defer></script>
+    <script src="{% static 'blog/js/flexBoxPoll.js' %}" defer></script>
+    <script src="{% static 'blog/js/popup.js' %}" defer></script>
+	<title>MEMORY</title>
+</head>
+<body>
+    <div id="popUps">
+        {% for post in object_list %}
+    	<div class="popUp_window" id="popUp1">
+    		<div class="popUp_container" id="popUp_container">
+                {{ post.description }}
+                <a href="javascript:close()" class="popUp_hide" data-elem="#popUp{{ post.id }}">закрыть</a>
+    		</div>
+    	</div>
+        {% endfor %}
+    </div>
+
+
+    <div class="nav_and_logo">
+        <div class="wrapper_head">
+            <a href="{% url 'homepage:index_page' %}" class="R">memory</a>
+            <a href="javascript:open()" class="but__pay-to-resp" data-elem="#popUpForm">
+                <div class="anim_block">
+                    <div class="anim_elem__anim_block">
+                        Поддержать
+                    </div>
+                </div>
+                <div class="pay-to-resp">
+                    <span class="text__pay-to-resp">Поддержать</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    {% if request.user.is_authenticated %}
+    <div class="main_admin">
+        <a href="/admin/blog/post/add/" class="admin_add">добавить</a>
+        <a href="/admin/blog/post" class="admin_edit">редактировать</a>
+    </div>
+    {% endif %}
+
+	<div class="main_block">  
+        <div class="wrapper">
+            {% for post in object_list %}
+            <div class="veteran">
+                <img src="{{ post.image.url }}" class="image">
+                <div class="text_block">
+                    <span class="text">{{ post.date }}</span>
+                </div>
+                <a href="javascript:open()" class="info" data-elem="#popUp{{ post.id }}"></a>
+            </div>
+            {% endfor %}
+        </div>
+	</div>
+
+    <div class="social-icon">
+        <div class="icon-on-smart">
+            <a href="https://vk.com/kriiskross" class="icons">
+                <img src="css/img/icon/vk.png" class="icon" id="iconVK">
+            </a>
+            <a href="https://t-do.ru/joinchat/HwEpNBdhidRaMebuh59zfQ" class="icons">
+                <img src="css/img/icon/telegram.png" class="icon" id="iconTEL">
+            </a>
+            <a href="#" class="icons">
+                <img src="css/img/icon/twitter.png" class="icon" id="iconTWI">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
