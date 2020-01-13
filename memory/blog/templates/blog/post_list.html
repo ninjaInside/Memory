@@ -15,9 +15,9 @@
 <body>
     <div id="popUps">
         {% for post in object_list %}
-    	<div class="popUp_window" id="popUp1">
+        <div class="popUp_window" id="popUp{{ post.id }}">
     		<div class="popUp_container" id="popUp_container">
-                {{ post.description }}
+                <p>{{ post.description }}</p>
                 <a href="javascript:close()" class="popUp_hide" data-elem="#popUp{{ post.id }}">закрыть</a>
     		</div>
     	</div>
@@ -28,16 +28,7 @@
     <div class="nav_and_logo">
         <div class="wrapper_head">
             <a href="{% url 'homepage:index_page' %}" class="R">memory</a>
-            <a href="javascript:open()" class="but__pay-to-resp" data-elem="#popUpForm">
-                <div class="anim_block">
-                    <div class="anim_elem__anim_block">
-                        Поддержать
-                    </div>
-                </div>
-                <div class="pay-to-resp">
-                    <span class="text__pay-to-resp">Поддержать</span>
-                </div>
-            </a>
+            <a href="javascript:open()" class="but__pay-to-resp" data-elem="#popUpForm"></a>
         </div>
     </div>
 
@@ -62,18 +53,5 @@
         </div>
 	</div>
 
-    <div class="social-icon">
-        <div class="icon-on-smart">
-            <a href="https://vk.com/kriiskross" class="icons">
-                <img src="css/img/icon/vk.png" class="icon" id="iconVK">
-            </a>
-            <a href="https://t-do.ru/joinchat/HwEpNBdhidRaMebuh59zfQ" class="icons">
-                <img src="css/img/icon/telegram.png" class="icon" id="iconTEL">
-            </a>
-            <a href="#" class="icons">
-                <img src="css/img/icon/twitter.png" class="icon" id="iconTWI">
-            </a>
-        </div>
-    </div>
 </body>
 </html>
