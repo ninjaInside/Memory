@@ -11,5 +11,4 @@ class BlogConfig(AppConfig):
         verbose_name_plural - plural name uses django admin. In this case it is 'Посты'
     '''
     name = 'blog'
-    verbose_name = 'Пост'
-    verbose_name_plural = 'Посты'
+    verbose_name = 'Блог'
