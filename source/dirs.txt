@@ -1,5 +1,0 @@
-'/' в начале пути (например, '/source/') означает корень этого проекта
-
-1. JS - /memory/blog/static/blog/js/
-2. CSS - /memory/blog/static/blog/css/
-3. HTML - /memory/blog/templates/blog/
