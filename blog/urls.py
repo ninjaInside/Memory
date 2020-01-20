@@ -1,3 +1,9 @@
+'''
+Blog urls
+
+URLPATTERNS:
+    '' - 'blog/', call a PostListView, name - post_list
+'''
 from django.urls import path
 
 from . import views
