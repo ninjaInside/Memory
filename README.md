@@ -37,6 +37,7 @@ source memoryenv/bin/activate
 Exit from env directory and clone this git repository
 
 ```
+cd ../
 git clone https://github.com/ninjaInside/Memory.git
 ```
 
