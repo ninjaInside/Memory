@@ -14,7 +14,8 @@ class Post(models.Model):
 
     META:
         sort by name
-        'Post' is verbose name
+        'Пост' is verbose name
+        'Посты' is verbose name plural
 
     METHODS:
         __str__ - return name of veteran
