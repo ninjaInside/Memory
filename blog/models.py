@@ -27,7 +27,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ('name', )
-        verbose_name = 'Post'
+        verbose_name = 'Пост'
 
     def __str__(self):
         return self.name
