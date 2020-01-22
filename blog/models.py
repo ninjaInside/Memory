@@ -22,7 +22,8 @@ class Post(models.Model):
     '''
     name = models.CharField('Ф.И.О ветерана', max_length=100)
     date = models.CharField('Годы жизни', max_length=9,
-        validators=(RegexValidator(regex=r'\d-\d'), ))
+        validators=[RegexValidator(regex=r'\d-\d'), ],
+        help_text='В формате XXX-XXX')
     description = models.TextField('Описание')
     image = models.ImageField('Изображение')
 
