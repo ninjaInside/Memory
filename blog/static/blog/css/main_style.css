@@ -361,27 +361,27 @@ button {
 }
 
 .popUp_container {
-    max-width: 500px;
-    max-height: 1000px;
+    max-width: 50%;
+    max-height: 75%;
     text-align: justify;
     border-radius: 10px;
     padding: 25px;
+    padding-bottom: 0;
     color: #fff;
     background: black;
     position: relative;
     overflow: auto;
+    box-shadow: 0 0 50px rgba(0,0,0,0.6);
 }
 
 .popUp_container p {
-    margin: 0;
+    margin: 5px;
 }
 
 .popUp_hide {
     display: block;
     width: 100%;
-    padding: 15px;
-    padding-bottom: 0;
-    bottom: 0;
+    padding: 20px 0;
     left: 0;
     font-weight: bold;
     text-align: center;
@@ -450,7 +450,7 @@ button {
     }
     .popUp_container {
         max-width: 80%;
-        font-size: 40px;
+        font-size: 55px;
     }
 
     .society {
@@ -543,7 +543,8 @@ button {
     }
 
     .popUp_hide {
-        padding: 30px 0;
+        padding-top: 10px;
+        padding-bottom: 50px;
     }
 }
 
