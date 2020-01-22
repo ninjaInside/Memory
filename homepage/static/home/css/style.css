@@ -57,3 +57,22 @@ body {
 	color: #333;
 	background: white;
 }
+
+
+@media (max-width: 1024px) {
+    .main_text {
+        font-size: 900%;
+        margin-bottom: 50px;
+    }
+
+    .second_text {
+        width: 90%;
+        font-size: 300%;
+    }
+
+    .link {
+        padding: 40px 70px;
+        margin-top: 50px;
+        font-size: 300%;
+    }
+}
