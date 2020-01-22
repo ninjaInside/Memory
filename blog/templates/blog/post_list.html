@@ -34,7 +34,7 @@
 
     {% if request.user.is_authenticated %}
     <div class="main_admin">
-        <a href="/admin/blog/post/add/" class="admin_add">добавить</a>
+        <a href="{% url 'blog:add_post' %}" class="admin_add">добавить</a>
         <a href="/admin/blog/post" class="admin_edit">редактировать</a>
     </div>
     {% endif %}
