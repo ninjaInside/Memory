@@ -6,6 +6,10 @@ openForm();
 
 let defoltClientWidth;
 
+window.onload = function() {
+	defoltClientWidth = document.documentElement.clientWidth;
+}
+
 function cash(key, value=undefined) {
 
 	if (value == undefined) {
@@ -26,7 +30,6 @@ function _select_(select) {
 
 }
 
-setTimeout(() => defoltClientWidth = document.documentElement.clientWidth, 400)
 
 let popUpAll = document.querySelectorAll('.popUp_window');
 
@@ -45,7 +48,6 @@ function open() {
 			let clientWidthNow = document.documentElement.clientWidth;
   			let paddingFlame = clientWidthNow - defoltClientWidth;
   			_select_(".nav_and_logo").style.paddingRight = `${paddingFlame}px`;
-  			_select_(".header").style.paddingRight = `${paddingFlame}px`;
   			_select_(".main_block").style.paddingRight = `${paddingFlame}px`;
   			document.body.paddingRight = `${paddingFlame}px`;
 
@@ -64,7 +66,6 @@ function close() {
 			$($(this).data('elem')).hide()
 			document.body.style.overflow = "";
   			_select_(".nav_and_logo").style.paddingRight = "";
-  			_select_(".header").style.paddingRight = "";
   			_select_(".main_block").style.paddingRight = "";
   			document.body.paddingRight = ""
 

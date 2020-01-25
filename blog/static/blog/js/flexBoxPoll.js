@@ -1,5 +1,3 @@
-if (Modernizr.flexbox && Modernizr.flexwrap) {
-    
-} else {
+if (Modernizr.exiforientation) {
     flexibility(document.documentElement);
-}
+} 

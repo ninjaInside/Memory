@@ -6,7 +6,7 @@
     <script src="{% static 'blog/js/modernizr-custom.js' %}"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'blog/css/main_style.css' %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+    <script src="{% static 'blog/js/jquery.min.js' %}" defer></script>
     <script src="{% static 'blog/js/flexbility.js' %}" defer></script>
     <script src="{% static 'blog/js/flexBoxPoll.js' %}" defer></script>
     <script src="{% static 'blog/js/popup.js' %}" defer></script>
@@ -16,10 +16,13 @@
     <div id="popUps">
         {% for post in object_list %}
         <div class="popUp_window" id="popUp{{ post.id }}">
-    		<div class="popUp_container" id="popUp_container">
-                <p>{{ post.description|linebreaks }}</p>
-                <a href="javascript:close()" class="popUp_hide" data-elem="#popUp{{ post.id }}">закрыть</a>
-    		</div>
+    		  <div class="popUp_container" id="popUp_container">
+                    <p>{{ post.description|linebreaks }}</p>
+    		  </div>
+              <a href="javascript:close()" class="popUp_hide" data-elem="#popUp{{ post.id }}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="50" height="50"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M141.04,13.76h-110.08c-9.4944,0 -17.2,7.7056 -17.2,17.2v110.08c0,9.4944 7.7056,17.2 17.2,17.2h110.08c9.4944,0 17.2,-7.7056 17.2,-17.2v-110.08c0,-9.4944 -7.7056,-17.2 -17.2,-17.2zM119.4024,114.5176l-4.8848,4.8848l-28.5176,-28.5176l-28.5176,28.5176l-4.8848,-4.8848l28.5176,-28.5176l-28.5176,-28.5176l4.8848,-4.8848l28.5176,28.5176l28.5176,-28.5176l4.8848,4.8848l-28.5176,28.5176z"></path></g></g></svg></a>
     	</div>
         {% endfor %}
     </div>

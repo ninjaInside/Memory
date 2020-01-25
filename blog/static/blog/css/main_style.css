@@ -356,6 +356,7 @@ button {
     background: rgba(0,0,0,0.5);
     z-index: 10000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -365,12 +366,11 @@ button {
     max-height: 75%;
     text-align: justify;
     border-radius: 10px;
-    padding: 25px;
-    padding-bottom: 0;
+    padding: 25px 10px 25px 10px;
     color: #fff;
+    overflow: auto;
     background: black;
     position: relative;
-    overflow: auto;
     box-shadow: 0 0 50px rgba(0,0,0,0.6);
 }
 
@@ -382,7 +382,6 @@ button {
     display: block;
     width: 100%;
     padding: 20px 0;
-    left: 0;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -545,6 +544,11 @@ button {
     .popUp_hide {
         padding-top: 10px;
         padding-bottom: 50px;
+    }
+
+    .popUp_hide svg {
+        width: 140px;
+        height: 140px;
     }
 }
 
