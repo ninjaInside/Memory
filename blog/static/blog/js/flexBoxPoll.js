@@ -1,3 +1,3 @@
-if (Modernizr.exiforientation) {
+if (!Modernizr.exiforientation) {
     flexibility(document.documentElement);
 } 
