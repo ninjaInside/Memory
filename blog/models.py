@@ -20,9 +20,14 @@ class Post(models.Model):
     METHODS:
         __str__ - return name of veteran
     '''
-    name = models.CharField('Ф.И.О ветерана', max_length=100)
+    VALIDATORS = [
+        RegexValidator(r'[0-9]{4}-[0-9]{4}',
+                       message='Неправильный формат даты')
+    ]
+    name = models.CharField('Ф.И.О ветерана', max_length=100, unique=True)
     date = models.CharField('Годы жизни', max_length=9,
-        help_text='В формате XXX-XXX')
+        validators=VALIDATORS,
+        help_text='В формате XXXX-XXXX')
     description = models.TextField('Описание')
     image = models.ImageField('Изображение')
 

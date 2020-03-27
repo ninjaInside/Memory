@@ -12,5 +12,5 @@ class PostAdmin(admin.ModelAdmin):
         list_view - list of fields. 'name' and 'date'
         search_fields - search fields. 'name', 'description'
     '''
-    list_view = ('name', 'date')
+    list_display = ('name', 'date')
     search_fields = ('name', 'description')
