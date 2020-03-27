@@ -1,5 +1,4 @@
 // PopUp Window scripts
-
 var defoltClientWidth;
 
 window.onload = function() {
@@ -63,6 +62,12 @@ $(document).ready(function() {
 	})
 
 })
+
+$('.nav_and_logo__presentation-btn').click((e) => {
+
+	window.open('https://www.google.ru/intl/ru/slides/about/', 'Presentation', 'scrollbars=yes,resizable=no,status=no,location=no,toolbar=no,menubar=no') 
+
+}) 
 	
 
 
