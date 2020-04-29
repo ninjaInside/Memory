@@ -2,6 +2,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect, Http404
+from django.db.models import Q
 
 from .models import Post
 
@@ -15,7 +16,9 @@ class PostListView(ListView):
     template_name = 'blog/post_list.html'
 
     def get_queryset(self):
-        return self.model.objects.filter(is_confirm=True)
+        return self.model.objects.filter(
+            Q(is_confirm=True) | Q(author__username=self.request.user.username)
+        )
 
 
 class DeletePostView(DeleteView):
