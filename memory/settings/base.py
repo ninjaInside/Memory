@@ -1,16 +1,20 @@
 import os
 
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+def get_env_variable(var, default=None):
+    return os.environ.get(var, default)
+
+
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+)
 
 
 
-SECRET_KEY = '31s7bm*_tq)lg8gsh8wa6c^$q2t#c^jjvgn^550_@7)h(_n=^)'
-
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
-
+SECRET_KEY = get_env_variable(
+    'DJANGO_SECRET_KEY',
+    '31s7bm*_tq)lg8gsh8wa6c^$q2t#c^jjvgn^550_@7)h(_n=^)'
+)
 
 
 INSTALLED_APPS = [
@@ -61,15 +65,6 @@ WSGI_APPLICATION = 'memory.wsgi.application'
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -106,14 +101,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
