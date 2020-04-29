@@ -10,6 +10,7 @@
     <script src="{% static 'blog/js/flexbility.js' %}" defer></script>
     <script src="{% static 'blog/js/flexBoxPoll.js' %}" defer></script>
     <script src="{% static 'blog/js/popup.js' %}" defer></script>
+    <script src="{% static 'blog/js/base.js' %}" defer></script>
 	<title>MEMORY</title>
 </head>
 <body>
@@ -38,6 +39,16 @@
     <div class="nav_and_logo">
         <div class="wrapper_head">
             <a href="{% url 'home' %}" class="R">memory</a>
+            <div class="nav">
+                <div class="menu menu__full">
+                    <button class="menu__btn">nickname</button>
+                <div class="menu__list">
+                    <a href="#">Change password</a>    
+                    <a href="#">Log out</a>    
+                    <a href="#">Log in</a>    
+                </div>
+                </div>
+            </div>
         </div>
     </div>
 
