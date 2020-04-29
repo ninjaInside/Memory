@@ -113,10 +113,10 @@ header {
     font-family: 'Montserrat';
     text-align: left;
     margin-top: 15px;
-    background-color: rgba(209, 209, 209, .2);
-    border: 1px solid #fff;
+    background-color: #f0f0f0;
+    border: 1px solid rgba(255, 255, 255, 0);
     overflow: hidden;
-    height: 0;
+    display: none
 }
 
 .menu__full > button {
@@ -160,9 +160,11 @@ header {
 }
 
 .menu__list_show {
-    height: auto !important;
+    display: flex !important;
     border-color: rgba(209, 209, 209, .5);
 } 
+
+.menu__btn_close {}
 
 .menu__list > a:last-child:after {
     background-color: transparent;
@@ -541,10 +543,10 @@ button {
         font-family: 'Montserrat';
         text-align: left;
         margin-top: 15px;
-        background-color: rgba(209, 209, 209, .2);
+        background-color: #f0f0f0;
         border: 1px solid #fff;
         overflow: hidden;
-        height: 0;
+        display: none;
     }
 
     .menu__full a {
@@ -570,7 +572,7 @@ button {
     }
 
     .menu__list {
-        margin-top: 75px !important;
+        margin-top: 55px !important;
     }
 
     .popUp_buttons {
