@@ -20,7 +20,7 @@ Install pipenv if not already installed
 pip3 install pipenv
 ```
 
-Go to project directory and install all requirements from Pipfile.lock and create a virtualenv
+Go to project directory and install all requirements from Pipfile.lock
 
 ```
 python3 -m pipenv sync
@@ -34,7 +34,7 @@ python3 -m pipenv shell
 
 ### Start this project on localhost
 
-Make migrations and run Django server
+Run migrations and server
 
 ```
 python manage.py makemigrations
@@ -44,10 +44,9 @@ python manage.py runserver
 
 ### Run project in local network
 
-Make and run migrations
+Run migrations
 
 ```
-python manage.py makemigrations
 python manage.py migrate
 ```
 
