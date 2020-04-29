@@ -40,13 +40,24 @@
         <div class="wrapper_head">
             <a href="{% url 'home' %}" class="R">memory</a>
             <div class="nav">
-                <div class="menu">
-                    <button class="menu__btn">nickname</button>
-                <div class="menu__list">
-                    <a href="#">Change password</a>    
-                    <a href="#">Log out</a>    
-                    <a href="#">Log in</a>    
-                </div>
+                {% if user.is_authenticated %}
+                    <div class="menu">
+                        <button class="menu__btn">{{ user.username }}</button>
+                        <div class="menu__list">
+                            <a href="{% url 'add_post' %}">Добавить пост</a>
+                            <a href="#">Изменить пароль</a>    
+                            <a href="{% url 'logout' %}">Выйти</a>    
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="menu menu__full">
+                        <button class="menu__btn">{{ user.username }}</button>
+                        <div class="menu__list">
+                            <a href="{% url 'signup' %}">Зарегистрироваться</a>
+                            <a href="{% url 'login' %}">Войти</a>
+                        </div>
+                    </div>
+                {% endif %}
                 </div>
             </div>
         </div>
