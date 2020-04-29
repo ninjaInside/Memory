@@ -1,15 +1,12 @@
-'''
-Blog urls
-
-URLPATTERNS:
-    '' - 'blog/', call a PostListView, name - post_list
-'''
 from django.urls import path
 
 from . import views
 
-app_name = 'blog'
 urlpatterns = [
     path('', views.PostListView.as_view(), name='post_list'),
+    path('change-post/<int:pk>/', views.UpdatePostView.as_view(),
+        name='post_change'),
+    path('delete-post/<int:pk>/', views.DeletePostView.as_view(),
+        name='post_delete'),
     path('add-post/', views.AddPostView.as_view(), name='add_post'),
 ]

@@ -9,14 +9,18 @@ SECRET_KEY = '31s7bm*_tq)lg8gsh8wa6c^$q2t#c^jjvgn^550_@7)h(_n=^)'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 
 INSTALLED_APPS = [
-    'homepage',
+    # Local
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
+
+    # Third
     'crispy_forms',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +44,7 @@ ROOT_URLCONF = 'memory.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,6 +86,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+LOGIN_REDIRECT_URL = 'post_list'
+
+LOGOUT_REDIRECT_URL = 'post_list'
+
 
 LANGUAGE_CODE = 'ru'
 
@@ -96,10 +104,16 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

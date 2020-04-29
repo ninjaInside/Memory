@@ -1,52 +1,29 @@
 # Memory
 
-This is a site about WWII veterans
+It's a site about veterans of WWII
 
 ## Startup
 
 If you want to run this project on your pc, follow these steps
 
-### Virtualenv
+### Pipenv
 
-Create directory for virtualenv
-
-```
-mkdir .envs
-```
-
-Install virtualenv if not already installed
+Install pipenv if not already installed
 
 ```
-pip3 install virtualenv
+pip3 install pipenv
 ```
 
-Create virtualenv
+Install all requirements from Pipfile.lock and create a virtualenv
 
 ```
-python3 -m virtualnv memoryenv
+python3 -m pipenv sync
 ```
 
-Activate this env
+Activate shell
 
 ```
-source memoryenv/bin/activate
-```
-
-### Download project
-
-Exit from env directory and clone this git repository
-
-```
-cd ../
-git clone https://github.com/ninjaInside/Memory.git
-```
-
-### Pip requirements
-
-Cd in project directory and install all requirements of this project
-
-```
-pip install -r requirements.txt
+python3 -m pipenv shell
 ```
 
 ### Start this project on localhost

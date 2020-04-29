@@ -1,0 +1,23 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Change Post</title>
+    </head>
+    <body>
+        <div class="container mt-4 mb-4">
+            <h1 class="mb-4 text-center"><a href="{% url 'post_list' %}">MEMORY</a></h1>
+            <h4 class="card-title">Изменить пост</h4>
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary btn-block">Изменить пост</button>
+                <a style="display: block; width: 100%; text-align: center; margin-top: 15px;" href="{% url 'post_list' %}">Вернуться на сайт</a>
+            </form>
+        </div>
+    </body>
+</html>
