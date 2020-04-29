@@ -32,7 +32,7 @@ Activate shell
 python3 -m pipenv shell
 ```
 
-### Start this project on localhost
+### Run this project on localhost
 
 Run migrations and server
 
