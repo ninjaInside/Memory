@@ -1,9 +1,13 @@
 from django.urls import reverse_lazy
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect, Http404
 
 from .models import Post
+
+
+class DescriptionView(TemplateView):
+    template_name = 'blog/add_post_description.html'
 
 
 class PostListView(ListView):
@@ -47,7 +51,7 @@ class AddPostView(CreateView):
     model = Post
     fields = ['name', 'date', 'description', 'image']
     template_name = 'blog/add_post.html'
-    success_url = reverse_lazy('post_list')
+    success_url = reverse_lazy('add_post_description')
 
     def dispatch(self, *args, **kwargs):
         if not self.request.user.is_authenticated:
@@ -60,5 +64,7 @@ class AddPostView(CreateView):
         obj.author = self.request.user
         if obj.author.is_staff:
             obj.is_confirm = True
+            obj.save()
+            return HttpResponseRedirect(reverse_lazy('post_list'))
         obj.save()
         return HttpResponseRedirect(self.success_url)
