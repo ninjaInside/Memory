@@ -22,7 +22,7 @@ class DeletePostView(DeleteView):
     def dispatch(self, *args, **kwargs):
         obj = self.get_object()
         if (self.request.user.username == obj.author.username or
-                self.request.user.is_superuser):
+                self.request.user.is_staff):
             return super().dispatch(*args, **kwargs)
         else:
             raise Http404('Чо, самый дерзкий? А ну иди сюда, сосунок!')
@@ -37,7 +37,7 @@ class UpdatePostView(UpdateView):
     def dispatch(self, *args, **kwargs):
         obj = self.get_object()
         if (self.request.user.username == obj.author.username or
-                self.request.user.is_superuser):
+                self.request.user.is_staff):
             return super().dispatch(*args, **kwargs)
         else:
             raise Http404('Чо, самый дерзкий? А ну иди сюда, сосунок!')
@@ -58,7 +58,7 @@ class AddPostView(CreateView):
     def form_valid(self, form, *args, **kwargs):
         obj = form.save(commit=False)
         obj.author = self.request.user
-        if obj.author.is_superuser:
+        if obj.author.is_staff:
             obj.is_confirm = True
         obj.save()
         return HttpResponseRedirect(self.success_url)
