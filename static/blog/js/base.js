@@ -1,32 +1,5 @@
-function getCookie(name) {
-  let matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  ));
-  return matches ? decodeURIComponent(matches[1]) : undefined;
-}
-
-function setCookie(name, value, options = {}) {
-  options = {
-    path: '/',
-    ...options
-  };
-
-  if (options.expires instanceof Date) {
-    options.expires = options.expires.toUTCString();
-  }
-
-  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
-
-  for (let optionKey in options) {
-    updatedCookie += "; " + optionKey;
-    let optionValue = options[optionKey];
-    if (optionValue !== true) {
-      updatedCookie += "=" + optionValue;
-    }
-  }
-
-  document.cookie = updatedCookie;
-}
+let currentUser;
+	currentUser = $('.menu__btn').text()
 
 function adaptiveMenuBtn(target) {
 	if ($(target).width() <= 1030) {
@@ -38,7 +11,7 @@ function adaptiveMenuBtn(target) {
 	
 	} else if ($(target).width() >= 1030) {
 
-		$('.menu__btn').html(getCookie('name'))
+		$('.menu__btn').html(currentUser)
 
 		$('.menu__btn').css('width', '')
 		$('.menu__btn').css('height', '')
@@ -48,10 +21,6 @@ function adaptiveMenuBtn(target) {
 }
 
 $(document).ready(() => {
-	if (!getCookie('name')) {
-		setCookie('name', $('.menu__btn').text())
-	}
-
 	$('.menu__btn').click((e) => {
 		if (!$(e.currentTarget).text()) {
 			$(e.currentTarget).toggleClass('menu__btn_close')
