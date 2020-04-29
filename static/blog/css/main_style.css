@@ -98,7 +98,8 @@ header {
 .menu__btn {
     color: #fff;
     font-family: sans-serif;
-    background: transparent;
+    background: url('../icons/burger.png') no-repeat;
+    background-size: 100%;
     border: 0;
     margin-top: 8px;
     font-size: .9rem;
@@ -119,12 +120,13 @@ header {
     display: none
 }
 
+
 .menu__full > button {
     display: none;
 }
 
 .menu__full > .menu__list {
-    height: 100%;
+    display: flex;
     flex-direction: row;
     margin: 0;
     background-color: transparent;
@@ -523,6 +525,17 @@ button {
 
 .icon-on-smart {
     display: none
+}
+
+@media (min-width: 1030px) {
+    .menu__full {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu__btn {
+        background: transparent;
+    }
 }
 
 @media (max-width: 1100px) {
