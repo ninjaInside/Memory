@@ -20,7 +20,7 @@ Install pipenv if not already installed
 pip3 install pipenv
 ```
 
-Go to project directory and install all requirements from Pipfile.lock
+Go to the project directory and install all requirements from Pipfile.lock
 
 ```
 python3 -m pipenv sync
@@ -37,7 +37,6 @@ python3 -m pipenv shell
 Run migrations and server
 
 ```
-python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
@@ -74,3 +73,11 @@ And inet field is your IP
 ```
 
 In my case it's ```192.168.1.57```. So, i need to connect to 192.168.1.57:8000
+
+## Run Tests
+
+If you change the code you need to run tests
+
+```
+python manage.py test
+```
