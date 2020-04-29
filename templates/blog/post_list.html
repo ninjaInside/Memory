@@ -17,7 +17,7 @@
     <div id="popUps">
         {% for post in object_list %}
         <div class="popUp_window" id="popUp{{ post.id }}">
-            {% if user.username == post.author.username or user.is_staff %}
+            {% if user.username == post.author.username and not post.is_confirm or user.is_staff %}
                 <div class="popUp_buttons">
                     <a href="{% url 'post_change' post.id %}"><img src="{% static 'blog/icons/change.png' %}"></a>
                     <a href="{% url 'post_delete' post.id %}"><img src="{% static 'blog/icons/delete.png' %}"></a>
@@ -61,16 +61,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="main_admin">
-        {% if user.is_authenticated %}
-            <a href="{% url 'add_post' %}" class="admin_add">добавить пост</a>
-            <a href="{% url 'logout' %}" class="admin_edit">выйти</a>
-        {% else %}
-            <a href="{% url 'login' %}" class="admin_add">Вход</a>
-            <a href="{% url 'signup' %}" class="admin_edit">Регистрация</a>
-        {% endif %}
     </div>
 
 	<div class="main_block">  

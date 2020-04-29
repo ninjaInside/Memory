@@ -28,11 +28,12 @@ class DeletePostView(DeleteView):
 
     def dispatch(self, *args, **kwargs):
         obj = self.get_object()
-        if (self.request.user.username == obj.author.username or
+        if (self.request.user.username == obj.author.username and
+                not obj.is_confirm or
                 self.request.user.is_staff):
             return super().dispatch(*args, **kwargs)
-        else:
-            raise Http404('Чо, самый дерзкий? А ну иди сюда, сосунок!')
+
+        raise Http404
 
 
 class UpdatePostView(UpdateView):
@@ -43,11 +44,12 @@ class UpdatePostView(UpdateView):
 
     def dispatch(self, *args, **kwargs):
         obj = self.get_object()
-        if (self.request.user.username == obj.author.username or
+        if (self.request.user.username == obj.author.username and
+                not obj.is_confirm or
                 self.request.user.is_staff):
             return super().dispatch(*args, **kwargs)
-        else:
-            raise Http404('Чо, самый дерзкий? А ну иди сюда, сосунок!')
+
+        raise Http404
 
 
 class AddPostView(CreateView):
@@ -58,7 +60,7 @@ class AddPostView(CreateView):
 
     def dispatch(self, *args, **kwargs):
         if not self.request.user.is_authenticated:
-            raise Http404('You need to be logged in')
+            raise Http404
 
         return super().dispatch(*args, **kwargs)
 

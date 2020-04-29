@@ -564,6 +564,7 @@ button {
 
     .menu__full a {
         color: black !important;
+        width: 100%
     }
 
     .menu__full *:after {
@@ -581,7 +582,8 @@ button {
 
     .menu__btn {
         margin-top: 32px;
-        font-size: 2rem
+        font-size: 2rem;
+        margin-right: 50px;
     }
 
     .menu__list {
