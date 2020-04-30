@@ -27,6 +27,8 @@
                 {% if not post.is_confirm %}
                     <p style="text-align: center; margin-bottom: 15px"><b>ПОСТ НА МОДЕРАЦИИ</b></p>
                 {% endif %}
+                <h3>{{ post.name }} ({{ post.date }})</h3>
+                <i>Автор: {{ post.author.username }}</i>
                 <p>{{ post.description|linebreaks }}</p>
    	        </div>
             <a href="#" class="popUp_hide" data-elem="#popUp{{ post.id }}"><img src="{% static 'blog/icons/close.png' %}"></a>

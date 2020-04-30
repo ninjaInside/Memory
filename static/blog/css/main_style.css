@@ -435,7 +435,7 @@ button {
 
 
 .info {
-    position: absolute;
+   position: absolute;
     right: 0;
     top: 0;
     width: 35px;
@@ -479,6 +479,17 @@ button {
     background: black;
     position: relative;
     box-shadow: 0 0 50px rgba(0,0,0,0.6);
+}
+
+.popUp_container i {
+    padding: 0 5px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.popUp_container h3 {
+    padding: 0 5px;
+    margin: 10px 0;
 }
 
 .popUp_container p {
@@ -588,6 +599,12 @@ button {
 
     .menu__list {
         margin-top: 55px !important;
+    }
+    
+    .popUp_container i {
+        padding: 0 5px;
+        display: block;
+        margin-bottom: 40px;
     }
 
     .popUp_buttons {
