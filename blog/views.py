@@ -1,7 +1,8 @@
 from django.urls import reverse_lazy
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.http import HttpResponseRedirect, Http404
+from django.core.exceptions import PermissionDenied
+from django.http import HttpResponseRedirect
 from django.db.models import Q
 
 from .models import Post
@@ -33,7 +34,7 @@ class DeletePostView(DeleteView):
                 self.request.user.is_staff):
             return super().dispatch(*args, **kwargs)
 
-        raise Http404
+        raise PermissionDenied
 
 
 class UpdatePostView(UpdateView):
@@ -49,7 +50,7 @@ class UpdatePostView(UpdateView):
                 self.request.user.is_staff):
             return super().dispatch(*args, **kwargs)
 
-        raise Http404
+        raise PermissionDenied
 
 
 class AddPostView(CreateView):
@@ -60,16 +61,17 @@ class AddPostView(CreateView):
 
     def dispatch(self, *args, **kwargs):
         if not self.request.user.is_authenticated:
-            raise Http404
+            raise PermissionDenied
 
         return super().dispatch(*args, **kwargs)
 
-    def form_valid(self, form, *args, **kwargs):
+    def form_valid(self, form):
         obj = form.save(commit=False)
         obj.author = self.request.user
         if obj.author.is_staff:
             obj.is_confirm = True
             obj.save()
             return HttpResponseRedirect(reverse_lazy('post_list'))
+
         obj.save()
         return HttpResponseRedirect(self.success_url)
