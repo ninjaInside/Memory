@@ -32,7 +32,7 @@
                 <i>Автор: {{ post.author.username }}</i>
                 <p>{{ post.description|linebreaks }}</p>
    	        </div>
-            <a href="#" class="popUp_hide" data-elem="#popUp{{ post.id }}"><img src="{% static 'blog/icons/close.png' %}"></a>
+            <button class="popUp_hide" data-elem="#popUp{{ post.id }}"><img src="{% static 'blog/icons/close.png' %}"></button>
 
     	</div>
         {% endfor %}

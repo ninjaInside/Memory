@@ -526,6 +526,8 @@ button {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;	
+    background: transparent;
+    border: 0;
 }
 
 .popUp_hide img {
