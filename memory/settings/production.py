@@ -2,19 +2,15 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['memory-veterans.xyz', 'www.memory-veterans.xyz']
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'name',
-        'USER': 'user',
-        'PASSWORD': 'password',
+        'NAME': get_env_variable('DJANGO_DB_NAME'),
+        'USER': get_env_variable('DJANGO_DB_USER'),
+        'PASSWORD': get_env_variable('DJANGO_DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '',
     }
 }
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staitc')
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

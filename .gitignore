@@ -1,6 +1,8 @@
 db.sqlite3
+memory.sock
 /media
 /mediafiles
+/staticfiles
 __pycache__/
 *.swp
 .env

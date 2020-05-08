@@ -1,7 +1,13 @@
 import os
 
+from django.core.exceptions import ImproperlyConfigured
+
 
 def get_env_variable(var, default=None):
+    env = os.environ.get(var, default)
+    if not env:
+        raise ImproperlyConfigured(f'You need to set {var} variable')
+
     return os.environ.get(var, default)
 
 
@@ -101,6 +107,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
