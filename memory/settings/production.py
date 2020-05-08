@@ -2,7 +2,11 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'memory-veterans.xyz',
+    'www.memory-veterans.xyz',
+    '94.103.88.74',
+]
 
 DATABASES = {
     'default': {
