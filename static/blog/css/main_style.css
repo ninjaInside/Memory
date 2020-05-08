@@ -120,7 +120,6 @@ header {
     display: none
 }
 
-
 .menu__full > button {
     display: none;
 }
@@ -144,11 +143,12 @@ header {
 }
 
 .menu__list > a {
-    padding: 10px 10px;
+    padding: 15px 20px;
     display: inline;
     white-space: nowrap;
     position: relative;
     color: #000;
+    font-size: 20px;
 }
 
 .menu__list > a:after {
@@ -484,16 +484,19 @@ button {
 .popUp_container i {
     padding: 0 5px;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .popUp_container h3 {
     padding: 0 5px;
     margin: 10px 0;
+    font-size: 30px;
 }
 
 .popUp_container p {
-    margin: 5px;
+    margin: 10px 5px;
+    line-height: 25px;
+    font-size: 18px;
 }
 
 .popUp_buttons {
@@ -588,7 +591,8 @@ button {
     }
 
     .menu__list > a {
-        padding: 25px 25px;
+        padding: 30px 40px;
+        font-size: 60px;
     }
 
     .menu__btn {
@@ -600,11 +604,28 @@ button {
     .menu__list {
         margin-top: 55px !important;
     }
+
+    .popUp_container {
+        max-height: 70%;
+    }
     
     .popUp_container i {
         padding: 0 5px;
         display: block;
         margin-bottom: 40px;
+    }
+
+    .popUp_container h3 {
+        font-size: 90px;
+    }
+
+    .popUp_container p {
+        font-size: 60px;
+        line-height: 80px;
+    }
+
+    .popUp_container i {
+        margin-bottom: 100px;
     }
 
     .popUp_buttons {
