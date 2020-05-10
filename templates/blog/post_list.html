@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="Мы собираем информацию о наших героях - тех, кто смог пройти поля сражений Великой Отечественной Войны, и тех, кого эта война навсегда забрала с собой">
     <script src="{% static 'blog/js/modernizr-custom.js' %}"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'blog/css/main_style.css' %}">
     <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon">
     <script src="{% static 'blog/js/jquery.min.js' %}" defer></script>
@@ -12,7 +13,7 @@
     <script src="{% static 'blog/js/flexBoxPoll.js' %}" defer></script>
     <script src="{% static 'blog/js/popup.js' %}" defer></script>
     <script src="{% static 'blog/js/base.js' %}" defer></script>
-	<title>MEMORY</title>
+    <title>MEMORY</title>
 </head>
 <body>
     <div id="popUps">
@@ -24,14 +25,14 @@
                     <a href="{% url 'post_delete' post.id %}"><img src="{% static 'blog/icons/delete.png' %}"></a>
                 </div>
             {% endif %}
-    	    <div class="popUp_container" id="popUp_container">
+    	    <div itemscope itemtype="https://schema.org/Person" class="popUp_container" id="popUp_container">
                 {% if not post.is_confirm %}
                     <p style="text-align: center; margin-bottom: 15px"><b>ПОСТ НА МОДЕРАЦИИ</b></p>
                 {% endif %}
-                <h3>{{ post.name }} ({{ post.date }})</h3>
+		<h3><span itemprop="name">{{ post.name }}</span> ({{ post.date }})</h3>
                 <i>Автор: {{ post.author.username }}</i>
                 <p>{{ post.description|linebreaks }}</p>
-   	        </div>
+   	    </div>
             <button class="popUp_hide" data-elem="#popUp{{ post.id }}"><img src="{% static 'blog/icons/close.png' %}"></button>
 
     	</div>
