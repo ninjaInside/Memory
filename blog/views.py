@@ -29,8 +29,7 @@ class DeletePostView(DeleteView):
 
     def dispatch(self, *args, **kwargs):
         obj = self.get_object()
-        if (self.request.user.username == obj.author.username and
-                not obj.is_confirm or
+        if (self.request.user == obj.author and not obj.is_confirm or
                 self.request.user.is_staff):
             return super().dispatch(*args, **kwargs)
 
@@ -45,8 +44,7 @@ class UpdatePostView(UpdateView):
 
     def dispatch(self, *args, **kwargs):
         obj = self.get_object()
-        if (self.request.user.username == obj.author.username and
-                not obj.is_confirm or
+        if (self.request.user == obj.author and not obj.is_confirm or
                 self.request.user.is_staff):
             return super().dispatch(*args, **kwargs)
 

@@ -10,6 +10,7 @@
     </head>
     <body>
         <div class="container mt-4">
+            <h1>Удалить пост</h1>
             <form method="post">
                 {% csrf_token %}
                 <p>Вы действительно хотите удалить информацию о {{ post.name }}?</p>
