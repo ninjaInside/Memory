@@ -10,8 +10,7 @@ urlpatterns = [
     path('home/', TemplateView.as_view(template_name='home/index.html'),
         name='home'),
     path('blog/', include('blog.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('accounts.urls')),
+    path('accounts/', include('allauth.urls')),
     path('', RedirectView.as_view(url='home/')),
 ]
 

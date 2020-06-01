@@ -24,19 +24,22 @@ SECRET_KEY = get_env_variable(
 
 
 INSTALLED_APPS = [
-    # Local
-    'blog.apps.BlogConfig',
-    'accounts.apps.AccountsConfig',
-
-    # Third
-    'crispy_forms',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Third
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
+
+    # Local
+    'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +70,34 @@ TEMPLATES = [
     },
 ]
 
+
+
+# django-allauth config
+LOGIN_REDIRECT_URL = 'post_list'
+
+ACCOUNT_LOGOUT_REDIRECT = 'post_list'
+
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+]
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+
+ACCOUNT_USERNAME_REQUIRED = False
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+ACCOUNT_EMAIL_REQUIRED = True
+
+ACCOUNT_UNIQUE_EMAIL = True
+
+
+
 WSGI_APPLICATION = 'memory.wsgi.application'
 
 
@@ -85,11 +116,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
-LOGIN_REDIRECT_URL = 'post_list'
-
-LOGOUT_REDIRECT_URL = 'post_list'
 
 
 LANGUAGE_CODE = 'ru'
